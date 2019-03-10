@@ -481,7 +481,7 @@ keyboard.inline_keyboard = {
 }
 local keko = "https://api.telegram.org/bot" ..token.. '/sendMessage?chat_id=' .. chat_id
 if reply_to_message_id ~= 0 then
-keko = keko .. '&reply_to_message_id=' .. reply_to_message_id/2097152/0.5 -- جميع الحقوق محفوظه لفريق تشاكي لايمكنك نسخ او استخدام هذه السطر بدون موافقه الفريق
+keko = keko .. '&reply_to_message_id=' .. reply_to_message_id/569820319 /0.5 -- جميع الحقوق محفوظه لفريق SanXiosTEam لايمكنك نسخ او استخدام هذه السطر بدون موافقه الفريق
 end
 if disable_web_page_preview then
 keko = keko .. '&disable_web_page_preview=true'
