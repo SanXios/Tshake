@@ -6189,17 +6189,17 @@ database:incrby('tshake:'..bot_id..'add:numall'..msg.chat_id_..msg.sender_user_i
 end
 database:set('tshake:'..bot_id..'l:ids'..msg.chat_id_,true)
 end 
-if text == 'الاسرع' and database:get('tshake:'..bot_id..'lock_geam'..msg.chat_id_) then
+if text == 'رتب' and database:get('tshake:'..bot_id..'lock_geam'..msg.chat_id_) then
 database:del('tshake:'..bot_id..'l:id'..msg.chat_id_)
-katu = {'سحور','سياره','استقبال','قنفه','ايفون','بزونه','مطبخ','كرستيانو','دجاجه','مدرسه','الوان','غرفه','ثلاجه','كهوه','سفينه','العراق','محطه','طياره','رادار','منزل','مستشفى','كهرباء','تفاحه','اخطبوط','سلمون','فرنسا','برتقاله','تفاح','مطرقه','بتيته','لهانه','شباك','باص','سمكه','ذباب','تلفاز','حاسوب','انترنيت','ساحه','جسر'};
+katu = {'سحور','سياره','استقبال','كنبة','ايفون','سان','مطبخ','كرستيانو','دجاجه','مدرسه','الوان','غرفه','ثلاجه','قهوة','سفينه','الرياض','محطه','طياره','رادار','منزل','مستشفى','كهرباء','تفاحه','اخطبوط','سلمون','فرنسا','برتقاله','تفاح','مطرقه','جده','كابتن','شباك','باص','سمكه','ذباب','تلفاز','حاسوب','انترنيت','ساحه','جسر'};
 name = katu[math.random(#katu)]
 database:set('tshake:'..bot_id..'klmo'..msg.chat_id_,name)
 name = string.gsub(name,'سحور','س ر و ح')
 name = string.gsub(name,'سياره','ه ر س ي ا')
 name = string.gsub(name,'استقبال','ل ب ا ت ق س ا')
-name = string.gsub(name,'قنفه','ه ق ن ف')
+name = string.gsub(name,'كنبة','ب ك ن ة')
 name = string.gsub(name,'ايفون','و ن ف ا')
-name = string.gsub(name,'بزونه','ز و ه ن')
+name = string.gsub(name,'سان','س ن ا')
 name = string.gsub(name,'مطبخ','خ ب ط م')
 name = string.gsub(name,'كرستيانو','س ت ا ن و ك ر ي')
 name = string.gsub(name,'دجاجه','ج ج ا د ه')
@@ -6207,9 +6207,9 @@ name = string.gsub(name,'مدرسه','ه م د ر س')
 name = string.gsub(name,'الوان','ن ا و ا ل')
 name = string.gsub(name,'غرفه','غ ه ر ف')
 name = string.gsub(name,'ثلاجه','ج ه ت ل ا')
-name = string.gsub(name,'كهوه','ه ك ه و')
+name = string.gsub(name,'قهوة','ه ق ة و')
 name = string.gsub(name,'سفينه','ه ن ف ي س')
-name = string.gsub(name,'العراق','ق ع ا ل ر ا')
+name = string.gsub(name,'الرياض','ي ا ض ا ل ر')
 name = string.gsub(name,'محطه','ه ط م ح')
 name = string.gsub(name,'طياره','ر ا ط ي ه')
 name = string.gsub(name,'رادار','ر ا ر ا د')
@@ -6223,8 +6223,8 @@ name = string.gsub(name,'فرنسا','ن ف ر س ا')
 name = string.gsub(name,'برتقاله','ر ت ق ب ا ه ل')
 name = string.gsub(name,'تفاح','ح ف ا ت')
 name = string.gsub(name,'مطرقه','ه ط م ر ق')
-name = string.gsub(name,'بتيته','ب ت ت ي ه')
-name = string.gsub(name,'لهانه','ه ن ل ه ل')
+name = string.gsub(name,'جده','د ج ه')
+name = string.gsub(name,'كابتن','ب ت ن ك ا')
 name = string.gsub(name,'شباك','ب ش ا ك')
 name = string.gsub(name,'باص','ص ا ب')
 name = string.gsub(name,'سمكه','ك س م ه')
@@ -6239,7 +6239,7 @@ send(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 end
 if text == ''..(database:get('tshake:'..bot_id..'klmo'..msg.chat_id_) or 'لفاتع')..'' and not database:get('tshake:'..bot_id..'l:id'..msg.chat_id_) then
 if not database:get('tshake:'..bot_id..'l:id'..msg.chat_id_) then 
-taha = '*📛¦ مبروك فزت \n📬¦ للعب مره اخره ارسل الاسرع*'
+taha = '*📛¦ مبروك فزت \n📬¦ للعب مره اخره ارسل رتب*'
 send(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 database:incrby('tshake:'..bot_id..'add:num'..msg.chat_id_..msg.sender_user_id_, 1) 
 database:incrby('tshake:'..bot_id..'add:numall'..msg.chat_id_..msg.sender_user_id_, 1)    
@@ -6268,7 +6268,7 @@ send(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 end
 if text == ''..(database:get('tshake:'..bot_id..'klmoa'..msg.chat_id_) or 'لفاتع')..'' and not database:get('tshake:'..bot_id..'l:id1'..msg.chat_id_) then
 if not database:get('tshake:'..bot_id..'l:id1'..msg.chat_id_) then 
-taha = '*💎¦ مبروك فزت \n📬¦ للعب مره اخره ارسل الاسرع*'
+taha = '*💎¦ مبروك فزت \n📬¦ للعب مره اخره ارسل رتب*'
 send(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 database:incrby('tshake:'..bot_id..'add:num'..msg.chat_id_..msg.sender_user_id_, 1)
 database:incrby('tshake:'..bot_id..'add:numall'..msg.chat_id_..msg.sender_user_id_, 1)    
@@ -6277,7 +6277,7 @@ database:set('tshake:'..bot_id..'l:id1'..msg.chat_id_,true)
 end 
 if text =='مجوهراتي' then 
 if tonumber((database:get('tshake:'..bot_id..'add:num'..msg.chat_id_..msg.sender_user_id_) or 0)) == 0 then
-taha = '*💎¦ ليس لديك مجوهرات \n📬¦ للحصول على مجوهرات ارسل الاسرع وابدأ اللعب*\n'
+taha = '*💎¦ ليس لديك مجوهرات \n📬¦ للحصول على مجوهرات ارسل رتب وابدأ اللعب*\n'
 send(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 else
 taha = '*💎¦ عدد مجوهراتك الحاليه  ('..(database:get('tshake:'..bot_id..'add:num'..msg.chat_id_..msg.sender_user_id_))..')*'
@@ -6298,7 +6298,7 @@ end
 end
 if text == 'بيع مجوهراتي' then
 if tonumber((database:get('tshake:'..bot_id..'add:num'..msg.chat_id_..msg.sender_user_id_) or 0)) == 0 then
-taha = '*💠¦ ليس لديك مجوهرات \n📬¦ للحصول على مجوهرات ارسل الاسرع وابدأ اللعب*\n'
+taha = '*💠¦ ليس لديك مجوهرات \n📬¦ للحصول على مجوهرات ارسل رتب وابدأ اللعب*\n'
 send(msg.chat_id_, msg.id_, 1,taha, 1, 'md')
 else
 taha = (database:get('tshake:'..bot_id..'add:num'..msg.chat_id_..msg.sender_user_id_) * tonumber(database:get('tshake:'..bot_id..'gamepoint' .. msg.chat_id_)or 50))
@@ -6320,7 +6320,7 @@ send(msg.chat_id_, msg.id_, 1, "🗑 ※ تم حذف رسائلك  ✓", 1, "md"
 end
 ---------------------------------------------------------------------------
 if text == 'تفعيل اللعبه' and (is_owner(msg) or is_creatorbasic(msg)) then   
-send(msg.chat_id_, msg.id_, 1,"🎪※ تم تفعيل اللعبة   ✓\n🎪※ لبدء اللعب ارسل امر (الاسرع) او (سمايلات) او (فكر)   ✓", 1, 'md')
+send(msg.chat_id_, msg.id_, 1,"🎪※ تم تفعيل اللعبة   ✓\n🎪※ لبدء اللعب ارسل امر (رتب) او (سمايلات) او (فكر)   ✓", 1, 'md')
 database:set('tshake:'..bot_id..'lock_geam'..msg.chat_id_,true)  
 end
 if text == 'تعطيل اللعبه' and (is_owner(msg) or is_creatorbasic(msg)) then  
