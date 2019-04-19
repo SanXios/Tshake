@@ -4177,14 +4177,14 @@ else
 send(msg.chat_id_, msg.id_, 1, '✖┇لم يتم وضع ترحيب للمجموعه\n', 1, 'md')
 end
 end  
-if text:match("^منع (.*)$") and (is_mod(msg) or is_creatorbasic(msg)) then
-local filters = {string.match(text, "^(منع) (.*)$")}
+if text:match("^ممنع (.*)$") and (is_mod(msg) or is_creatorbasic(msg)) then
+local filters = {string.match(text, "^(ممنع) (.*)$")}
 local name = string.sub(filters[2], 1, 50)
 database:hset('tshake:'..bot_id..'filters:'..msg.chat_id_, name, 'filtered')
 send(msg.chat_id_, msg.id_, 1, "☑┇تم اضافتها لقائمه المنع\n🔘┇{"..name.."}", 1, 'md')
 end  
-if text:match("^الغاء منع (.*)$") and (is_mod(msg) or is_creatorbasic(msg)) then
-local rws = {string.match(text, "^(الغاء منع) (.*)$")}
+if text:match("^الغاء ممنع (.*)$") and (is_mod(msg) or is_creatorbasic(msg)) then
+local rws = {string.match(text, "^(الغاء ممنع) (.*)$")}
 local name = string.sub(rws[2], 1, 50)
 database:hdel('tshake:'..bot_id..'filters:'..msg.chat_id_, rws[2])
 send(msg.chat_id_, msg.id_, 1, "☑┇تم حذفها من لقائمه المنع\n🔘┇{"..rws[2].."}", 1, 'md')
