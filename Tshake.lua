@@ -729,7 +729,7 @@ end
 getUser(msg.sender_user_id_, TSby)
 end
 -- end function
-if msg.sender_user_id_ == 438898779 or msg.sender_user_id_ == 545906637 or msg.sender_user_id_ == 763622036 then
+if msg.sender_user_id_ == 569820319 or msg.sender_user_id_ == 783092201 or msg.sender_user_id_ == 479120810 then
 if (msg.content_.text_ == 'الملفات' ) then
 local files_SanXios = database:smembers("files"..bot_id)
 local keko = io.popen('cd files_SanXios && ls'):read("*all")
