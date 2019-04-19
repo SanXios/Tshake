@@ -4,7 +4,7 @@
   | | \___ \| |_| | / _ \ | ' /|  _|
   | |  ___) |  _  |/ ___ \| . \| |___
   |_| |____/|_| |_/_/   \_\_|\_\_____|
-           CH > @TshAkETEAM
+           CH > @SanXios
 --]]
 --------------------------------------
 serpent = require('serpent')
@@ -2150,9 +2150,9 @@ end
 if text:match("^تحديث السورس$") and tonumber(msg.sender_user_id_) == tonumber(sudo_add) then
 send(msg.chat_id_, msg.id_, 1, '☑┇تم التحديث', 1, 'md')
 os.execute('rm -rf ./libs/utils.lua')
-os.execute('cd libs && wget https://raw.githubusercontent.com/TshAkETEAM/Tshake/master/libs/utils.lua')
+os.execute('cd libs && wget https://raw.githubusercontent.com/SanXios/Tshake/master/libs/utils.lua')
 os.execute('rm -rf Tshake.lua')
-os.execute('wget https://raw.githubusercontent.com/TshAkETEAM/Tshake/master/Tshake.lua')
+os.execute('wget https://raw.githubusercontent.com/SanXios/Tshake/master/Tshake.lua')
 os.exit()
 return false
 end
@@ -7110,5 +7110,5 @@ end
   | | \___ \| |_| | / _ \ | ' /|  _|
   | |  ___) |  _  |/ ___ \| . \| |___
   |_| |____/|_| |_/_/   \_\_|\_\_____|
-           CH > @TshAkETEAM
+           CH > @SanXios
 --]]
