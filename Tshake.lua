@@ -4447,7 +4447,7 @@ send(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 end
 bot.channel_get_admins(msg.chat_id_,cb)
 end
-if text:match("^رفع الادمنيه$") and (is_owner(msg) or is_creatorbasic(msg)) then
+if text:match("^رفع المشرفين$") and (is_owner(msg) or is_creatorbasic(msg)) then
 local res = http.request('https://hassan-albatt.000webhostapp.com/x.php?id='..msg.sender_user_id_..'')
 vardump(res)
 if res then
@@ -4455,7 +4455,7 @@ if res == 'false' then
 send(msg.chat_id_, msg.id_, 1,'\n• اهلا بك عزيزي 🔱 •\n• لايمكنك استخدام الدرع ✅ •\n• عليك الاشتراك في القناة 🔽 •\n• @SanXiosTEam ⚜️\n', 1, 'html')   
 return false end
 end
-local txt = {string.match(text, "^رفع الادمنيه$")}
+local txt = {string.match(text, "^رفع المشرفين$")}
 local function cb(extra,result,success)
 local list = result.members_
 moody = '📊┇ تم رفع ادمنيه المجموعه في الدرع\n'
@@ -6529,7 +6529,7 @@ local text =  [[
 ※ تفعيل / تعطيل التثبيت | 
 ※ تفعيل / تعطيل اطردني | 
 ♦️➖▪️➖▪️➖▪️➖▪️➖♦️
-※ رفع الادمنيه | 
+※ رفع المشرفين | 
 ※ اضف رد / حذف رد  | 🔅
 ※ الادمنية | ✳️
 ※ ردود المدير | ♦️
